@@ -1,0 +1,11 @@
+# Anchors the pnpm workspace root to this project.
+#
+# Without this file pnpm walks up the directory tree, finds
+# ~/pnpm-workspace.yaml in the user's home folder, and adopts THAT as the
+# root — which sends pnpm-lock.yaml to ~/pnpm-lock.yaml and hoists packages
+# into ~/node_modules. The repo then has no lockfile to commit, so CI
+# resolves dependency versions fresh on every build.
+#
+# An empty package list is correct: this is a single-package repo, and the
+# file exists only to stop the upward search.
+packages: []
