@@ -43,10 +43,43 @@
     U+FEFF, U+FFFD;
 }
 
-/* ---------------------------------------------------------------- TOKENS
-   Dark only. There is no light theme and no `dark:` variant — every utility
-   resolves against this single block. */
+/* v4 defaults `dark:` to prefers-color-scheme. Switch it to a class so the
+   toggle can override the OS. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ---------------------------------------------------------------- LIGHT
+   Not an inversion. #7B61FF on a white canvas is about 3.2:1 and fails AA for
+   body text, so the accent drops to violet-700 (#6D28D9 ~ 5.8:1) and the
+   gradient's pink end darkens to match. Same hue family, retuned for the
+   substrate. */
 :root {
+  --bg: #fafafc;
+  --surface: #ffffff;
+  --surface-2: #f2f1f8;
+  --border: #e4e2ed;
+  --border-strong: #d6d3e3;
+  --text-primary: #14121f;
+  --text-muted: #4a4658;
+  --text-subtle: #6b6779;
+
+  --accent: #6d28d9;
+  --accent-hover: #5b21b6;
+  --accent-soft: rgb(109 40 217 / 0.1);
+  --accent-glow: rgb(109 40 217 / 0.18);
+  --on-accent: #ffffff;
+  --ring: #6d28d9;
+
+  --gradient-1: linear-gradient(45deg, #6d28d9, #db2777);
+  --gradient-2: linear-gradient(45deg, #059669, #0891b2, #2563eb);
+
+  --shadow-card: 0 1px 2px rgb(20 18 31 / 0.04), 0 12px 32px -16px rgb(20 18 31 / 0.18);
+  --nav-h: 4rem;
+
+  color-scheme: light;
+}
+
+/* ----------------------------------------------------------------- DARK */
+.dark {
   --bg: #0a0a1a;
   --surface: #12122a;
   --surface-2: #1a1a2e;
@@ -67,7 +100,6 @@
   --gradient-2: linear-gradient(45deg, #61ffae, #61ffd9, #61b6ff);
 
   --shadow-card: 0 1px 2px rgb(0 0 0 / 0.5), 0 12px 32px -16px rgb(0 0 0 / 0.8);
-  --nav-h: 4rem;
 
   color-scheme: dark;
 }

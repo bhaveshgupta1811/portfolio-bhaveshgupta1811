@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { Menu } from 'lucide-react'
+import ThemeToggle from './ThemeToggle'
 import MobileMenu from './MobileMenu'
 import { useScrollSpy } from '@/hooks/useScrollSpy'
 import { site } from '@/data/site'
@@ -92,6 +93,7 @@ export default function Navbar() {
           </ul>
 
           <div className="flex items-center gap-2">
+            <ThemeToggle />
             <a
               href={site.resumePath}
               target="_blank"

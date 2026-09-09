@@ -29,7 +29,7 @@ export default function GapPanel() {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="fixed bottom-4 left-4 z-[70] inline-flex items-center gap-2 rounded-lg border border-amber-500/40 bg-amber-500/10 px-3 py-2 text-sm font-medium text-amber-400 backdrop-blur"
+        className="fixed bottom-4 left-4 z-[70] inline-flex items-center gap-2 rounded-lg border border-amber-500/40 bg-amber-500/10 px-3 py-2 text-sm font-medium text-amber-600 backdrop-blur dark:text-amber-400"
       >
         <AlertTriangle size={15} aria-hidden="true" />
         {gaps.length} content gaps
@@ -40,7 +40,7 @@ export default function GapPanel() {
   return (
     <aside className="fixed bottom-4 left-4 z-[70] max-h-[70vh] w-[min(28rem,calc(100vw-2rem))] overflow-y-auto rounded-card border border-amber-500/40 bg-surface p-4 shadow-[var(--shadow-card)]">
       <div className="mb-3 flex items-center justify-between gap-4">
-        <h2 className="text-sm font-semibold text-amber-400">
+        <h2 className="text-sm font-semibold text-amber-600 dark:text-amber-400">
           Content gaps ({gaps.length}) — dev only
         </h2>
         <button

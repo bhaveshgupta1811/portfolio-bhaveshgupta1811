@@ -4,6 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Must run before any stylesheet, or dark-mode visitors get a white flash. -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('bg-portfolio-theme')
+          var theme =
+            stored === 'light' || stored === 'dark'
+              ? stored
+              : window.matchMedia('(prefers-color-scheme: light)').matches
+                ? 'light'
+                : 'dark'
+          if (theme === 'dark') document.documentElement.classList.add('dark')
+        } catch (e) {
+          document.documentElement.classList.add('dark')
+        }
+      })()
+    </script>
+
     <title>Bhavesh Gupta — Software Development Engineer</title>
     <meta
       name="description"
@@ -32,7 +50,8 @@
     />
     <meta name="twitter:image" content="https://portfolio-bhaveshgupta1811.onrender.com/og-image.png" />
 
-    <meta name="theme-color" content="#0a0a1a" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0a0a1a" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fafafc" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <script type="application/ld+json">
