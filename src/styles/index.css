@@ -148,7 +148,9 @@
 /* ------------------------------------------------------------- UTILITIES */
 @utility container-page {
   margin-inline: auto;
-  max-width: 72rem;
+  /* 1320px — matches the Bootstrap xxl container the reference design uses.
+     Wider than this and body copy line lengths stop being comfortable. */
+  max-width: 82.5rem;
   padding-inline: 1.25rem;
   @media (width >= 40rem) {
     padding-inline: 1.5rem;
