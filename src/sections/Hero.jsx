@@ -11,12 +11,13 @@ import { visibleProjects } from '@/data/projects'
 const ICONS = { Github: GithubIcon, Linkedin: LinkedinIcon, Code2 }
 
 // Only literal, resume-backed numbers. No computed "N years of experience" —
-// that is a claim the resume does not make.
+// that is a claim the resume does not make. Numeric so the counters can animate
+// the real figure; suffix carries any non-numeric decoration.
 const STATS = [
-  { value: `${visibleProjects.length}`, label: 'Featured projects' },
-  { value: `${experience.length}`, label: 'Professional roles' },
-  { value: '600+', label: 'LeetCode problems solved' },
-  { value: '8.6', label: 'B.Tech CGPA' },
+  { value: visibleProjects.length, label: 'Featured projects' },
+  { value: experience.length, label: 'Professional roles' },
+  { value: 600, suffix: '+', label: 'LeetCode problems solved' },
+  { value: 8.6, decimals: 1, label: 'B.Tech CGPA' },
 ]
 
 export default function Hero() {
@@ -42,10 +43,7 @@ export default function Hero() {
             id="hero-heading"
             className="text-4xl font-semibold tracking-tight sm:text-5xl xl:text-6xl"
           >
-            Hi, I&apos;m Bhavesh{' '}
-            <span className="bg-gradient-to-r from-accent to-accent-hover bg-clip-text text-transparent">
-              Gupta
-            </span>
+            Hi, I&apos;m Bhavesh <span className="text-gradient">Gupta</span>
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">{site.summary}</p>
@@ -87,7 +85,12 @@ export default function Hero() {
         <ul className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
           {STATS.map((stat) => (
             <li key={stat.label}>
-              <StatTile value={stat.value} label={stat.label} />
+              <StatTile
+                value={stat.value}
+                label={stat.label}
+                decimals={stat.decimals}
+                suffix={stat.suffix}
+              />
             </li>
           ))}
         </ul>

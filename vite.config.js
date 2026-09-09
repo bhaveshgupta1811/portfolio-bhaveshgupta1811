@@ -7,6 +7,9 @@ import path from 'node:path'
 export default defineConfig({
   base: process.env.VITE_BASE || '/',
   plugins: [react(), tailwindcss()],
+  server: {
+    port: 5100,
+  },
   resolve: {
     alias: { '@': path.resolve(process.cwd(), 'src') },
   },

@@ -28,22 +28,22 @@ export const site = {
 
   nav: [
     { id: 'about', label: 'About' },
-    { id: 'skills', label: 'Skills' },
-    { id: 'experience', label: 'Experience' },
+    { id: 'services', label: 'Services' },
     { id: 'projects', label: 'Projects' },
-    { id: 'education', label: 'Education' },
+    { id: 'experience', label: 'Experience' },
+    { id: 'skills', label: 'Skills' },
     { id: 'contact', label: 'Contact' },
   ],
 
   seo: {
-    url: 'https://bhavesh-gupta.vercel.app',
+    url: 'https://portfolio-bhaveshgupta1811.onrender.com',
     ogImage: '/og-image.png',
   },
 
   gaps: [
-    'site.seo.url is a guess — set the real Vercel host before deploying, and update sitemap.xml + the absolute og:image in index.html to match.',
-    'public/og-image.png is a placeholder. Replace with a real 1200x630 card.',
-    'Location "Pune, India" is confirmed by you, not stated on the resume.',
+    'public/og-image.png does not exist. Social shares render without a preview card.',
+    'Render: Redirects/Rewrites rule /* -> /index.html (Rewrite) is not configured, so every /projects/* URL 404s on a cold load.',
+    'public/Bhavesh_Gupta_CDAC.pdf was lost when dist/ was rebuilt. Re-supply it if you want it linked.',
   ],
 }
 

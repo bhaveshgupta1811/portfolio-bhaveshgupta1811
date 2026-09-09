@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://bhavesh-gupta.vercel.app/</loc>
+    <loc>https://portfolio-bhaveshgupta1811.onrender.com/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://bhavesh-gupta.vercel.app/projects/workflow-automation-engine</loc>
+    <loc>https://portfolio-bhaveshgupta1811.onrender.com/projects/workflow-automation-engine</loc>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bhavesh-gupta.vercel.app/projects/airgo</loc>
+    <loc>https://portfolio-bhaveshgupta1811.onrender.com/projects/airgo</loc>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bhavesh-gupta.vercel.app/projects/foodnotify</loc>
+    <loc>https://portfolio-bhaveshgupta1811.onrender.com/projects/foodnotify</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bhavesh-gupta.vercel.app/projects/portfolio</loc>
+    <loc>https://portfolio-bhaveshgupta1811.onrender.com/projects/portfolio</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>

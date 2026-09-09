@@ -1,34 +1,43 @@
 /**
  * verifyUrl: null renders a non-interactive card — no hover lift, no cursor
  * pointer, nothing implying a click. A dead "Verify" button is worse than none.
+ *
+ * Prefer an issuer verification URL over a self-hosted PDF: anyone can host a
+ * PDF, so only the issuer's own page actually verifies anything.
  */
 export const certifications = [
   {
     id: 'cdac',
-    name: 'CDAC — Java Full Stack Development',
-    issuer: 'Sunbeam Institute',
+    name: 'PG Diploma in Advanced Computing (PG-DAC)',
+    issuer: 'Sunbeam Institute of Information Technology, Karad — C-DAC ATC',
     year: '2025',
-    note: 'Hands-on training in Java full stack development.',
-    credentialId: null,
-    verifyUrl: null,
+    note: '900-hour full-time postgraduate diploma. Grade A.',
+    credentialId: 'B369761',
+    // Self-hosted certificate page only — C-DAC provides no public verification
+    // endpoint. The marks statement is deliberately not included in this PDF.
+    verifyUrl: '/Bhavesh_Gupta_CDAC.pdf',
+    verifyLabel: 'View certificate',
   },
   {
     id: 'minnalearn',
-    name: 'Elements of AI & Agentic AI',
-    issuer: 'MinnaLearn Academy',
+    name: 'Elements of AI',
+    issuer: 'MinnaLearn & University of Helsinki',
     year: '2026',
-    note: null,
+    note: '2 ECTS credits.',
     credentialId: null,
-    verifyUrl: null,
+    verifyUrl: 'https://certificates.mooc.fi/validate/bc92b1m5xo7',
   },
   {
     id: 'hackerrank-java',
-    name: 'Certified Java Developer',
+    // The certificate reads "Java (Basic)" — a HackerRank skill certification
+    // test. Titled to match, because the card links to it and a visitor can
+    // check.
+    name: 'Java (Basic)',
     issuer: 'HackerRank',
     year: '2025',
-    note: null,
-    credentialId: null,
-    verifyUrl: null,
+    note: 'Skill certification test.',
+    credentialId: 'B04568616C8A',
+    verifyUrl: 'https://www.hackerrank.com/certificates/B04568616C8A',
   },
 ]
 
@@ -44,5 +53,5 @@ export const achievements = [
 ]
 
 export const certificationGaps = [
-  'No credential verification URLs for CDAC, MinnaLearn or HackerRank. Those three cards are non-interactive until you supply real ones.',
+  'Resume lists "Agentic AI by MinnaLearn" alongside Elements of AI, but only the Elements of AI certificate was supplied. Add it as a separate entry if you have it.',
 ]

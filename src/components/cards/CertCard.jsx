@@ -41,7 +41,7 @@ export default function CertCard({ item }) {
 
         {verifiable ? (
           <p className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-accent">
-            Verify
+            {item.verifyLabel ?? 'Verify'}
             <ExternalLink size={13} aria-hidden="true" />
           </p>
         ) : null}

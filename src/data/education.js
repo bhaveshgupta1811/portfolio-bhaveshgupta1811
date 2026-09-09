@@ -7,6 +7,6 @@ export const education = [
     start: '2021',
     end: '2024',
     grade: { label: 'CGPA', value: '8.6' },
-    url: null,
+    url: 'https://lnct.ac.in',
   },
 ]

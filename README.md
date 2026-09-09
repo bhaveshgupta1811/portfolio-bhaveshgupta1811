@@ -6,7 +6,7 @@ Personal portfolio site. React + Vite + Tailwind CSS v4, deployed on Vercel.
 
 ```bash
 pnpm install
-pnpm dev        # http://localhost:5173
+pnpm dev        # http://localhost:5100
 pnpm build
 pnpm preview    # http://localhost:4173 — test deep links here, on the real bundle
 pnpm lint

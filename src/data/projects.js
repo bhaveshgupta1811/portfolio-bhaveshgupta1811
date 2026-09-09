@@ -98,15 +98,13 @@ export const projects = [
       'Hibernate (JPA)',
     ],
 
-    links: { repo: 'https://github.com/Sunbeam-Bhavesh/Airgo', demo: null, caseStudy: null },
+    // Live demo only — source is intentionally not published for this project.
+    links: { repo: null, demo: 'https://bhaveshgupta1811-airgo.vercel.app', caseStudy: null },
     media: { cover: null, screenshots: [] },
     period: null,
     role: null,
 
-    gaps: [
-      'Airgo: no live demo URL. Deploy it, or the demo button stays hidden.',
-      'Airgo: no screenshots. Capture 2-3 (booking flow, admin, seat map) at 1600x1000.',
-    ],
+    gaps: ['Airgo: no screenshots. Capture 2-3 (booking flow, admin, seat map) at 1600x1000.'],
   },
 
   {
@@ -137,13 +135,13 @@ export const projects = [
 
     tech: ['Java', 'Spring Boot', 'Spring Security', 'JWT', 'React.js', 'MySQL', 'REST API'],
 
-    links: { repo: null, demo: null, caseStudy: null },
+    links: { repo: 'https://github.com/bhaveshgupta1811/Foody', demo: null, caseStudy: null },
     media: { cover: null, screenshots: [] },
     period: null,
     role: null,
 
     gaps: [
-      'FoodNotify: no GitHub URL, so the card ships with no code button. Supply one or set published: false.',
+      'FoodNotify: no live demo URL. Deploy it, or the demo button stays hidden.',
       'FoodNotify: appeared on an earlier resume version. Confirm you still want it listed.',
     ],
   },
